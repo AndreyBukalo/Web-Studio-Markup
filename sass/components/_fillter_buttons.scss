@@ -1,0 +1,70 @@
+.filter {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.filter__btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-width: 0;
+  border-style: none;
+  padding: 0;
+  color: $second-text-color;
+  background: $team-bgc;
+  border-radius: 4px;
+  transition: color 250ms $cubic, background-color 250ms $cubic, box-shadow 250ms $cubic;
+  cursor: pointer;
+
+  &--all {
+    width: 73px;
+    height: 38px;
+    left: 495px;
+    top: 174px;
+
+    border-radius: 4px;
+  }
+  &--websites {
+    width: 128px;
+    height: 38px;
+    left: 576px;
+    top: 174px;
+    border-radius: 4px;
+  }
+  &--apps {
+    width: 145px;
+    height: 38px;
+    left: 712px;
+    top: 174px;
+    border-radius: 4px;
+  }
+  &--desing {
+    width: 103px;
+    height: 38px;
+    left: 865px;
+    top: 174px;
+    border-radius: 4px;
+  }
+  &--marketing {
+    width: 130px;
+    height: 38px;
+    left: 976px;
+    top: 174px;
+    border-radius: 4px;
+  }
+
+  &:hover,
+  :focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $button-color;
+    color: $white;
+  }
+}

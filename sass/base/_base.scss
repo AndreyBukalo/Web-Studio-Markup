@@ -1,0 +1,12 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  color: $main-text-color;
+  letter-spacing: 0.02em;
+  background-color: $white;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  display: block;
+}

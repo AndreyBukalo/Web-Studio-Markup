@@ -1,0 +1,25 @@
+$main-text-color: #757575; /* Основной цвет текста */
+$social-link-color: #afb1b8; /*Цвет социльных иконок*/
+$second-text-color: #212121; /* Вторичный цвет текста  */
+$accent: #2196f3; /* Акцент,цвет кнопок ссылок лого */
+$button-color: #2196f3; /* Цвет кнопок */
+$header-bgc: #ececec; /* фон хедера  */
+$porfolio-bgc: #eeeeee; /* фон портфолио */
+$team-bgc: #f5f4fa; /* фон команды */
+$footer-bgc: #2f303a; /* фон футера */
+$white: #fff; /* белый цвет  */
+$mail-text: rgba(255, 255, 255, 0.6); /* цвет контактов футера  */
+$back-color: rgba(0, 0, 0, 0.2); /*цвет беэкдропа */
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$main-font: 'Roboto', sans-serif;
+$Logo-font: 'Raleway', sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}

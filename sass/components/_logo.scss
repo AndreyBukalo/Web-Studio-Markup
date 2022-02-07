@@ -1,0 +1,19 @@
+.logo {
+  font-family: $Logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $second-text-color;
+}
+.logo--header {
+  color: $accent;
+}
+.logo--footer {
+  color: $white;
+  margin-bottom: 20px;
+}
+.logo--inverse {
+  color: $accent;
+}
