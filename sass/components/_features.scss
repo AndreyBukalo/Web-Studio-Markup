@@ -1,5 +1,6 @@
 .features {
-  // @extend %section;
+  margin-top: 60px;
+  @extend %section;
   padding-bottom: 0;
 
   &__title--hidden {

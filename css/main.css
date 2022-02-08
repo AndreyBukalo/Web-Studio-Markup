@@ -75,7 +75,7 @@
   }
 }
 
-.about, .team, .clients, .projects {
+.features, .about, .team, .clients, .projects {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -431,6 +431,7 @@ img {
 }
 
 .features {
+  margin-top: 60px;
   padding-bottom: 0;
 }
 
