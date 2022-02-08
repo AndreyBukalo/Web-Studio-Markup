@@ -1,10 +1,10 @@
 .features {
-  margin-top: 60px;
-  @extend %section;
-  padding-bottom: 0;
-
   &__title--hidden {
     @extend %visually-hidden;
+  }
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -14,10 +14,11 @@
 }
 .thumbnail__item {
   @media screen and (min-width: 480px) {
-    width: 450px;
-    // &:not(:first-child) {
-    //   margin-left: 30px;
-    // }
+    max-width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   .thumbnail__icon {

@@ -63,24 +63,12 @@
   }
 }
 
-@media screen and (min-width: 480px) and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 480px) and (min-width: 1140px) {
-  .container {
-    width: 1200px;
-  }
-}
-
-.features, .about, .team, .clients, .projects {
+.about, .projects {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.about__title, .team__title, .clients__title {
+.about__title, .team__title, .clients {
   font-size: 36px;
   font-weight: 700;
   line-height: calc(42 / 36);
@@ -96,6 +84,24 @@ body {
   letter-spacing: 0.02em;
   background-color: #fff;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-width: 768px) {
+  body {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-width: 1140px) {
+  body {
+    width: 1200px;
+  }
 }
 
 img {
@@ -394,8 +400,8 @@ img {
 @media screen and (max-width: 480px) {
   .hero {
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     width: 480px;
     height: 400px;
     background-position: center;
@@ -430,14 +436,19 @@ img {
   color: #212121;
 }
 
-.features {
-  margin-top: 60px;
-  padding-bottom: 0;
+@media screen and (min-width: 480px) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .thumbnail__item {
-    width: 450px;
+    max-width: 450px;
+  }
+  .thumbnail__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -530,31 +541,43 @@ img {
 .team__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
 }
 
-.card-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 480px) {
+  .team {
+    padding-top: 60px;
+  }
 }
 
-.card-list__item {
-  background: #fff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+@media screen and (min-width: 480px) {
+  .card-list__item {
+    width: 450px;
+    height: 629px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 }
 
-.card-list__item:not(:last-child) {
-  margin-right: 30px;
+.card__img {
+  width: 450px;
+  height: 460px;
 }
 
 .card-list__text {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .card-list__meta {
@@ -624,20 +647,36 @@ img {
   fill: currentColor;
 }
 
-.clients__title {
+.clients {
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
 }
 
-.icon-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 480px) {
+  .clients {
+    margin: 0 auto;
+    width: 480px;
+  }
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
 
-.icon-box__item:not(:first-child) {
-  margin-left: 30px;
+@media screen and (min-width: 480px) {
+  .icon-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+    margin-left: 15px;
+  }
+  .icon-box__item {
+    -ms-flex-preferred-size: calc(100% / 2);
+        flex-basis: calc(100% / 2);
+    margin-bottom: 30px;
+  }
 }
 
 .icon-box__icon {
@@ -656,7 +695,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
+  width: 210px;
+  height: 92px;
   padding-top: 16px;
   padding-bottom: 16px;
   border: 1.5px solid #afb1b8;
