@@ -1,59 +1,166 @@
 /* Шапка и навигация */
 
 .page-header {
+  position: relative;
   min-height: 80px;
   background-color: $white;
   border-bottom: 1px solid $header-bgc;
+  align-items: center;
 }
 
 .container--page-header {
-  @include flex-center;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    width: 480px;
+  }
+  @media screen and (min-width: 1140px) {
+    @include flex-center;
+  }
+}
+
+.menu-button {
+  z-index: 3;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  :focus {
+    fill: $accent;
+  }
+  &__cross {
+    display: none;
+  }
+}
+.menu-button--is-open .menu-button__cross {
+  display: block;
+}
+.menu-button--is-open .menu-button__menu {
+  display: none;
+}
+
+.mobile-menu {
+  @media screen and (max-width: 480px) {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: none;
+    height: 796px;
+    background: $white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    &--is-open {
+      display: block;
+    }
+  }
 }
 .navigation {
   @extend %list;
-  display: flex;
-  margin-left: 93px;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1140px) {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 .navigation__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  text-decoration: none;
-  color: $second-text-color;
-  transition: color 250ms $cubic;
+  @media screen and (max-width: 480px) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    text-decoration: none;
+    color: $second-text-color;
+    transition: color 250ms $cubic;
+  }
   &:hover,
   :focus {
     color: $accent;
   }
 }
+@media screen and (min-width: 1140px) {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+}
+
 .navigation__link--current {
   position: relative;
   color: $accent;
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    bottom: 0;
+  @media screen and (min-width: 1140px) {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
 
-    background-color: $accent;
-    border-radius: 2px;
+      background-color: $accent;
+      border-radius: 2px;
+    }
+  }
+}
+.navigation__item {
+  @media screen and (max-width: 480px) {
+    margin-left: 40px;
+    &:first-child {
+      margin-top: 48px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }
 
-.navigation__item:not(:last-child) {
-  margin-right: 50px;
+.contacts {
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 302px;
+    margin-left: 40px;
+
+    &__link {
+      display: block;
+      &:last-child {
+        margin-bottom: 32px;
+      }
+      transition: color 250ms $cubic;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: calc(40 / 34);
+      text-decoration: none;
+      color: $main-text-color;
+      &:hover,
+      :focus {
+        color: $accent;
+      }
+    }
+    &__icon {
+      display: none;
+    }
+    &__text--mobile {
+      font-size: 24px;
+      line-height: calc(28 / 24);
+    }
+  }
 }
 
-.contacts {
+@media screen and (min-width: 1140px) {
   @include flex-center;
   margin-left: auto;
 
   &__icon {
+    display: block;
     margin-right: 10px;
     fill: currentColor;
     &:hover {
@@ -61,18 +168,44 @@
     }
   }
   &__link {
-    transition: color 250ms $cubic;
     @include flex-center;
     font-weight: 500;
     line-height: calc(16 / 14);
-    text-decoration: none;
-    color: $main-text-color;
-    &:hover,
-    :focus {
-      color: $accent;
+
+    &__link--right-indent {
+      margin-right: 50px;
     }
   }
-  &__link--right-indent {
-    margin-right: 50px;
+}
+
+.mobile-social {
+  @media screen and (max-width: 480px) {
+    margin-top: 64px;
+    margin-left: 40px;
+
+    &__link {
+      display: inline-block;
+      position: relative;
+      padding-right: 20px;
+
+      &::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+
+        width: 22px;
+
+        top: 45%;
+        left: 80%;
+        transform: rotate(90deg);
+        border: 1px solid rgba(33, 33, 33, 0.2);
+      }
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: calc(22 / 18);
+      letter-spacing: 0.02em;
+      color: $accent;
+    }
   }
 }

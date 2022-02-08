@@ -1,4 +1,7 @@
 .about {
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
   @extend %section;
 
   &__title {
