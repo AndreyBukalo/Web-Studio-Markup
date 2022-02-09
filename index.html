@@ -79,7 +79,7 @@
 
         
         <!--Приемущества-->
-        <section class="features container">
+        <section class="features">
             <div class="container">
                 <h2 class="features__title--hidden">Наши Преимущества</h2>
                 <!--Заголовок скрыт-->
@@ -135,18 +135,26 @@
                 <ul class="img-set">
                     <li class="img-set__item">
                         <div class="img-set__thumb">
-                            <img src="./images/box1.jpg" alt="Планшет на столе" width="370">
+                            <img srcset="./images/desk-notebook.jpg 1x,
+                                          ./images/desk-notebook@2x.jpg 2x"
+                            src="./images/desk-notebook.jpg" alt="Планшет на столе" width="370">
                         <p class="img-set__desc">Десктопные приложения</p>
                         </div>
                     </li>
                  <li class="img-set__item">
-                            <div class="img-set__thumb"><img src="./images/box2.jpg" alt="Айфон на фоне ноутбука" width="370">
+                            <div class="img-set__thumb"><img 
+                                srcset="./images/desk-analis.jpg 1x,
+                                          ./images/desk-analis@2x.jpg 2x"
+                                src="./images/desk-analis.jpg" alt="Айфон на фоне ноутбука" width="370">
                             <p class="img-set__desc">Мобильные приложения</p>
                             </div>
                         </li>
                     <li class="img-set__item">
                             <div class="img-set__thumb">
-                                <img src="./images/box3.jpg" alt="Планшет с палитрой цветов" width="370">
+                                <img srcset="./images/desk-paliter.jpg 1x,
+                                          ./images/desk-paliter@2x.jpg 2x"
+                                
+                                src="./images/desk-paliter.jpg" alt="Планшет с палитрой цветов" width="370">
                             <p class="img-set__desc">Дизайнерские решения</p></div>
                         </li>
                 </ul>
@@ -159,7 +167,14 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="card-list">
                     <li class="card-list__item">
-                        <img  class="card__img" src="./images/img.jpg" alt="Мужчина в красной рубашке" >
+                        <picture>
+                            <source srcset="./images/mteamcard1.jpg 1x, ./images/mteamcard1@2x.jpg 2x"
+                            media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/tab-teamcard1.jpg 1x, ./images/tab-teamcard1@2x.jpg 2x" media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                            <source srcset="./images/desk-teamcard1.jpg 1x, ./images/desk-teamcard1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                        <img  srcset="/images/desk-teamcard1.jpg 1x, ./images/desk-teamcard1@2x.jpg 2x"
+                        class="card__img" src="./images/desk-teamcard1.jpg" alt="Мужчина в красной рубашке">
+                    </picture>
                         <div class="card-list__text">
                             <h3 class="card-list__meta">Игорь Демьяненко</h3>
                             <p class="card-list__desc">Product Designer</p>
@@ -199,7 +214,16 @@
                         </div>
                     </li>
                     <li class="card-list__item">
-                        <img  class="card__img" src="./images/img1.jpg" alt="Девушка блондинка в пиджаке">
+                        <picture>
+                            <source srcset="./images/mteamcard2.jpg 1x, ./images/mteamcard2@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/tab-teamcard2.jpg 1x, ./images/tab-teamcard2@2x.jpg 2x"
+                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                            <source srcset="./images/desk-teamcard2.jpg 1x, ./images/desk-teamcard2@2x.jpg 2x" media="(min-width: 1200px)"
+                                type="image/jpg">
+                        
+                        <img srcset="/images/desk-teamcard2.jpg 1x, ./images/desk-teamcard2@2x.jpg 2x" class="card__img"
+                            src="./images/desk-teamcard2.jpg" alt="Девушка блондинка в пиджаке">
+                    </picture>
                         <div class="card-list__text">
                             <h3 class="card-list__meta">Ольга Репина</h3>
                             <p class="card-list__desc">Frontend Developer</p>
@@ -236,7 +260,16 @@
                         </div>
                     </li>
                     <li class="card-list__item">
-                        <img  class="card__img" src="./images/img2.jpg" alt="Мужчина в белой рубашке" >
+                        <picture>
+                            <source srcset="./images/mteamcard3.jpg 1x, ./images/mteamcard3@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/tab-teamcard3.jpg 1x, ./images/tab-teamcard3@2x.jpg 2x"
+                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                            <source srcset="./images/desk-teamcard3.jpg 1x, ./images/desk-teamcard3@2x.jpg 2x" media="(min-width: 1200px)"
+                                type="image/jpg">
+                        
+                        <img srcset="/images/desk-teamcard3.jpg 1x, ./images/desk-teamcard3@2x.jpg 2x" class="card__img"
+                            src="./images/desk-teamcard3.jpg" alt="Мужчина в белой рубашке" >
+                    </picture>
                         <div class="card-list__text">
                             <h3 class="card-list__meta">Николай Тарасов</h3>
                             <p class="card-list__desc">Marketing</p>
@@ -273,7 +306,16 @@
                         </div>
                     </li>
                     <li class="card-list__item">
-                        <img  class="card__img" src="./images/img3.jpg" alt="Мужчина в черной футболке" >
+                        <picture> 
+                            <source srcset="./images/mteamcard4.jpg 1x, ./images/mteamcard4@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/tab-teamcard4.jpg 1x, ./images/tab-teamcard4@2x.jpg 2x"
+                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                            <source srcset="./images/desk-teamcard4.jpg 1x, ./images/desk-teamcard4@2x.jpg 2x" media="(min-width: 1200px)"
+                                type="image/jpg">
+                        
+                        <img srcset="/images/desk-teamcard4.jpg 1x, ./images/desk-teamcard4@2x.jpg 2x" class="card__img"
+                            src="./images/desk-teamcard4.jpg" alt="Мужчина в черной футболке" >
+                    </picture>
                         <div class="card-list__text">
                             <h3 class="card-list__meta">Михаил Ермаков</h3>
                             <p class="card-list__desc">UI Designer</p>
@@ -377,8 +419,8 @@
     </main>
     <!-- Футер -->
 
-    <footer class="footer">
-        <div class="container container-footer">
+    <footer class="footer ">
+       <div class="container">
             <div class="contacts-block">
                 <a class="logo logo--footer" href="./index.html"><span class="logo logo--inverse">Web</span>Studio</a>
                 <address class="adress">
@@ -432,8 +474,8 @@
             
 </div>
 
-        </div>
-
+        
+</div>
     </footer>
 
     <div class="backdrop backdrop--is-hidden" data-modal>

@@ -15,7 +15,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
-  margin-left: 15px;
 
   &__item {
     flex-basis: calc(100% / 2);
@@ -33,7 +32,7 @@
   transition: color 250ms $cubic;
 
   @include flex-center;
-  width: 210px;
+  max-width: 210px;
   height: 92px;
   padding-top: 16px;
   padding-bottom: 16px;
