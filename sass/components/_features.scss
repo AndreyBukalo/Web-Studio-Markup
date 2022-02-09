@@ -2,10 +2,9 @@
   &__title--hidden {
     @extend %visually-hidden;
   }
-  @media screen and (min-width: 480px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .thumbnail {
@@ -13,37 +12,33 @@
   // @include flex-center;
 }
 .thumbnail__item {
-  @media screen and (min-width: 480px) {
-    max-width: 450px;
+  max-width: 450px;
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
-
-  .thumbnail__icon {
-    height: 120px;
-    @include flex-center;
+  &:not(:last-child) {
     margin-bottom: 30px;
-    background-color: $team-bgc;
   }
+}
 
-  .thumbnail__title {
-    @media screen and (min-width: 480px) {
-      @include reset;
-      margin-bottom: 10px;
-      font-weight: 700;
-      line-height: calc(16 / 14);
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-align: center;
-      color: $second-text-color;
-    }
-  }
+.thumbnail__icon {
+  height: 120px;
+  @include flex-center;
+  margin-bottom: 30px;
+  background-color: $team-bgc;
+}
 
-  .thumbnail__text {
-    @include reset;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-  }
+.thumbnail__title {
+  @include reset;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $second-text-color;
+}
+
+.thumbnail__text {
+  @include reset;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
 }
