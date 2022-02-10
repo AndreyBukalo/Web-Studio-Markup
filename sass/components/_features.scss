@@ -2,34 +2,36 @@
   &__title--hidden {
     @extend %visually-hidden;
   }
-
+ @media screen and (min-width: $tablet) {
   padding-top: 60px;
   padding-bottom: 60px;
-}
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+  padding-bottom:0px;
+}}}
 
 .thumbnail {
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-
-  // @include flex-center;
-}
+@media screen and (min-width: $desktop) {
+  display: flex;
+  flex-wrap: nowrap;
+}}
 .thumbnail__item {
-
-  
- 
   @media screen and (min-width: $tablet) {
     margin-right: 30px;
     width: calc(100% / 2 - 30px);
     &:nth-child(-n + 2){
       margin-bottom: 30px;
     }
+  @media screen and (min-width: $desktop) {
+    
+  &:last-child {
+    margin-right: 0px;
+    
   }
-
-  // &:not(:last-child) {
-  //   margin-bottom: 30px;
-  // }
-}
+}}}
 
 .thumbnail__icon {
   height: 120px;

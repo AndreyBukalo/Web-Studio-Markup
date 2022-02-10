@@ -6,6 +6,9 @@
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
   list-style: none;
   &__item:not(:first-child) {
     margin-left: 10px;
