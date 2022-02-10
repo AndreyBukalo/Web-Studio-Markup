@@ -11,12 +11,13 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+
   // @include flex-center;
 }
 .thumbnail__item {
 
-  min-width: 354px;
+  
+ 
   @media screen and (min-width: $tablet) {
     margin-right: 30px;
     width: calc(100% / 2 - 30px);
@@ -52,4 +53,7 @@
   @include reset;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+  &:not(:nth-child(4))  {
+    margin-bottom: 30px;
+  }
 }
