@@ -9,9 +9,9 @@
       width: 768px;
     }
 
-    @media screen and (min-width: 1200px) {
-      width: 1200px;
-    }
+    // @media screen and (min-width: 1200px) {
+    //   width: 1200px;
+    // }
   }
 }
 
@@ -19,11 +19,4 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0px auto;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0px auto;
-  }
 }

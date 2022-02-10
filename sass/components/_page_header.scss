@@ -2,7 +2,7 @@
 
 .page-header {
   position: relative;
-  min-height: 80px;
+  min-height: 60px;
   background-color: $white;
   border-bottom: 1px solid $header-bgc;
   align-items: center;
@@ -11,154 +11,122 @@
 .container--page-header {
   display: flex;
   align-items: center;
-  padding-top: 16px;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
+
   @media screen and (min-width: 1140px) {
     @include flex-center;
+    padding-top: 16px;
+  }
+}
+
+.main-nav {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    align-items: center;
   }
 }
 
 .navigation {
   @extend %list;
-
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
-    margin-left: 93px;
+    margin-left: 88px;
   }
 }
 .navigation__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
+  line-height: calc(16 / 14);
   text-decoration: none;
   color: $second-text-color;
   transition: color 250ms $cubic;
-
   &:hover,
   :focus {
     color: $accent;
   }
 }
-@media screen and (min-width: 1140px) {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-}
-
 .navigation__link--current {
   position: relative;
   color: $accent;
-  @media screen and (min-width: 1140px) {
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 4px;
-      bottom: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
 
-      background-color: $accent;
-      border-radius: 2px;
-    }
+    background-color: $accent;
+    border-radius: 2px;
   }
 }
+
 .navigation__item {
-  margin-left: 40px;
-  &:first-child {
-    margin-top: 48px;
-  }
   &:not(:last-child) {
-    margin-bottom: 32px;
+    margin-right: 50px;
+  }
+  @media screen and (min-width: $tablet) {
+    &:last-child {
+      margin-right: 84px;
+    }
   }
 }
 
 .contacts {
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: 302px;
-  margin-left: 40px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    @media screen and (min-width: $tablet) {
+      margin-right: 8px;
+      width: 14px;
+      height: 10px;
+      fill: currentColor;
+      &--phone {
+        width: 10px;
+        height: 14px;
+        fill: currentColor;
+        margin-right: 8px;
+      }
+      &:hover {
+        fill: $accent;
+      }
+    }
+  }
 
   &__link {
-    display: block;
-    &:last-child {
-      margin-bottom: 32px;
-    }
     transition: color 250ms $cubic;
+    @include flex-center;
     font-weight: 500;
-    font-size: 34px;
-    line-height: calc(40 / 34);
+
     text-decoration: none;
     color: $main-text-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
     &:hover,
     :focus {
       color: $accent;
     }
-  }
-  &__icon {
-    display: none;
-  }
-  &__text--mobile {
-    font-size: 24px;
-    line-height: calc(28 / 24);
-  }
-}
-
-@media screen and (min-width: 1140px) {
-  @include flex-center;
-  margin-left: auto;
-
-  &__icon {
-    display: block;
-    margin-right: 10px;
-    fill: currentColor;
-    &:hover {
-      fill: $accent;
+    &--right-indent {
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: $desktop) {
+        margin-right: 50px;
+      }
     }
-  }
-  &__link {
-    @include flex-center;
-    font-weight: 500;
-    line-height: calc(16 / 14);
-
-    &__link--right-indent {
-      margin-right: 50px;
-    }
-  }
-}
-
-.mobile-social {
-  margin-top: 64px;
-  margin-left: 40px;
-
-  &__link {
-    display: inline-block;
-    position: relative;
-    padding-right: 20px;
-
-    &::after {
-      display: inline-block;
-      content: '';
-      position: absolute;
-
-      width: 22px;
-
-      top: 45%;
-      left: 80%;
-      transform: rotate(90deg);
-      border: 1px solid rgba(33, 33, 33, 0.2);
-    }
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: calc(22 / 18);
-    letter-spacing: 0.02em;
-    color: $accent;
   }
 }
