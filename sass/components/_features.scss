@@ -9,14 +9,25 @@
 
 .thumbnail {
   @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
   // @include flex-center;
 }
 .thumbnail__item {
-  max-width: 450px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  min-width: 354px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 30px;
+    width: calc(100% / 2 - 30px);
+    &:nth-child(-n + 2){
+      margin-bottom: 30px;
+    }
   }
+
+  // &:not(:last-child) {
+  //   margin-bottom: 30px;
+  // }
 }
 
 .thumbnail__icon {

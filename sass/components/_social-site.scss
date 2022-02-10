@@ -1,11 +1,11 @@
 .social-site {
   display: flex;
   justify-content: center;
-
+  
   padding-left: 0;
   margin-left: 32px;
   margin-right: 32px;
-
+  margin-bottom: 24px;
   list-style: none;
   &__item:not(:first-child) {
     margin-left: 10px;
