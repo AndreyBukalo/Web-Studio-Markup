@@ -1053,6 +1053,17 @@ img {
   background-color: #2f303a;
 }
 
+@media screen and (min-width: 1200px) {
+  .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
 .contacts-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1066,8 +1077,30 @@ img {
           align-items: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin-right: 70px;
+  }
+}
+
 .adress {
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .adress {
+    text-align: left;
+  }
 }
 
 .adress__text {
@@ -1096,8 +1129,14 @@ img {
   margin-bottom: 60px;
 }
 
-.adress__link:hover,
-.adress__link :focus {
+@media screen and (min-width: 1200px) {
+  .adress__link:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.adress__link:last-child:hover,
+.adress__link:last-child :focus {
   color: #2196f3;
 }
 
@@ -1113,10 +1152,29 @@ img {
   color: #fff;
 }
 
+@media screen and (min-width: 1200px) {
+  .join-block__title {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join-block {
+    margin-right: 93px;
+  }
+}
+
 .social-site--cleanmargin {
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-site--cleanmargin {
+    margin-bottom: 0;
+  }
 }
 
 .social-site__link--graybcg {
@@ -1139,6 +1197,14 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .subcribe-block {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .subcribe-block__title {
   margin: 0;
   padding: 0;
@@ -1150,6 +1216,14 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .subcribe-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscribe-form__email {
@@ -1171,6 +1245,14 @@ img {
 @media screen and (min-width: 768px) {
   .subscribe-form__email {
     width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form__email {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
   }
 }
 
@@ -1242,12 +1324,31 @@ img {
   overflow: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
-  height: 609px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 90%;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__button {
