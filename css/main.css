@@ -82,6 +82,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -634,14 +635,12 @@ img {
   color: #212121;
 }
 
-@media screen and (min-width: 768px) {
-  .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
     padding-bottom: 0px;

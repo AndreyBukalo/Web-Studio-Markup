@@ -1,14 +1,13 @@
 .features {
+   padding-top: 60px;
+  padding-bottom: 60px;
   &__title--hidden {
     @extend %visually-hidden;
   }
- @media screen and (min-width: $tablet) {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  @media screen and (min-width: $desktop) {
+ @media screen and (min-width: $desktop) {
     padding-top: 94px;
   padding-bottom:0px;
-}}}
+}}
 
 .thumbnail {
   @extend %list;

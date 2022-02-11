@@ -188,12 +188,14 @@
                 <ul class="card-list">
                     <li class="card-list__item">
                         <picture>
-                            <source srcset="./images/mteamcard1.jpg 1x, ./images/mteamcard1@2x.jpg 2x"
-                            media="(max-width: 767px)" type="image/jpg">
-                            <source srcset="./images/tab-teamcard1.jpg 1x, ./images/tab-teamcard1@2x.jpg 2x" media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
-                            <source srcset="./images/desk-teamcard1.jpg 1x, ./images/desk-teamcard1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
-                        <img  srcset="./images/desk-teamcard1.jpg 1x, ./images/desk-teamcard1@2x.jpg 2x"
-                        class="card__img" src="./images/desk-teamcard1.jpg" alt="Мужчина в красной рубашке">
+                            <source srcset="./images/desk-teamcard1.jpg 1x, ./images/desk-teamcard1@2x.jpg 2x" media="(min-width: 1200px)"
+                                 />
+                            <source srcset="./images/tab-teamcard1.jpg 1x, ./images/tab-teamcard1@2x.jpg 2x" media="(min-width: 768px) "  />
+                            
+                        
+                        <source srcset="./images/mteamcard1.jpg 1x, ./images/mteamcard1@2x.jpg 2x" media="(max-width: 767px)"  />
+                        <img  
+                        class="card__img" src="./images/desk-teamcard1.jpg"  alt="Мужчина в красной рубашке">
                     </picture>
                         <div class="card-list__text">
                             <h3 class="card-list__meta">Игорь Демьяненко</h3>
@@ -235,13 +237,13 @@
                     </li>
                     <li class="card-list__item">
                         <picture>
-                            <source srcset="./images/mteamcard2.jpg 1x, ./images/mteamcard2@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/mteamcard2.jpg 1x, ./images/mteamcard2@2x.jpg 2x" media="(max-width: 767px)" >
                             <source srcset="./images/tab-teamcard2.jpg 1x, ./images/tab-teamcard2@2x.jpg 2x"
-                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                                media="(min-width: 768px) and (max-width:1199px)">
                             <source srcset="./images/desk-teamcard2.jpg 1x, ./images/desk-teamcard2@2x.jpg 2x" media="(min-width: 1200px)"
-                                type="image/jpg">
+                                type=>
                         
-                        <img srcset="/images/desk-teamcard2.jpg 1x, ./images/desk-teamcard2@2x.jpg 2x" class="card__img"
+                        <img  class="card__img"
                             src="./images/desk-teamcard2.jpg" alt="Девушка блондинка в пиджаке">
                     </picture>
                         <div class="card-list__text">
@@ -281,13 +283,13 @@
                     </li>
                     <li class="card-list__item">
                         <picture>
-                            <source srcset="./images/mteamcard3.jpg 1x, ./images/mteamcard3@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/mteamcard3.jpg 1x, ./images/mteamcard3@2x.jpg 2x" media="(max-width: 767px)" >
                             <source srcset="./images/tab-teamcard3.jpg 1x, ./images/tab-teamcard3@2x.jpg 2x"
-                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                                media="(min-width: 768px) and (max-width:1199px)" >
                             <source srcset="./images/desk-teamcard3.jpg 1x, ./images/desk-teamcard3@2x.jpg 2x" media="(min-width: 1200px)"
-                                type="image/jpg">
+                               >
                         
-                        <img srcset="/images/desk-teamcard3.jpg 1x, ./images/desk-teamcard3@2x.jpg 2x" class="card__img"
+                        <img  class="card__img"
                             src="./images/desk-teamcard3.jpg" alt="Мужчина в белой рубашке" >
                     </picture>
                         <div class="card-list__text">
@@ -327,13 +329,13 @@
                     </li>
                     <li class="card-list__item">
                         <picture> 
-                            <source srcset="./images/mteamcard4.jpg 1x, ./images/mteamcard4@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                            <source srcset="./images/mteamcard4.jpg 1x, ./images/mteamcard4@2x.jpg 2x" media="(max-width: 767px)">
                             <source srcset="./images/tab-teamcard4.jpg 1x, ./images/tab-teamcard4@2x.jpg 2x"
-                                media="(min-width: 768px) and (max-width:1199px)" type="image/jpg">
+                                media="(min-width: 768px) and (max-width:1199px)" >
                             <source srcset="./images/desk-teamcard4.jpg 1x, ./images/desk-teamcard4@2x.jpg 2x" media="(min-width: 1200px)"
-                                type="image/jpg">
+                                >
                         
-                        <img srcset="/images/desk-teamcard4.jpg 1x, ./images/desk-teamcard4@2x.jpg 2x" class="card__img"
+                        <img  class="card__img"
                             src="./images/desk-teamcard4.jpg" alt="Мужчина в черной футболке" >
                     </picture>
                         <div class="card-list__text">
@@ -556,7 +558,8 @@
     </div>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu-btn.js"
+    <script src="./js/mobile-menu-btn.js"></script>
+    
 </body>
 
 </html>
