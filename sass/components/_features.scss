@@ -4,7 +4,7 @@
   &__title--hidden {
     @extend %visually-hidden;
   }
- @media screen and (min-width: $desktop) {
+@include 1200 {
     padding-top: 94px;
   padding-bottom:0px;
 }}
@@ -13,18 +13,18 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-@media screen and (min-width: $desktop) {
+@include 1200 {
   display: flex;
   flex-wrap: nowrap;
 }}
 .thumbnail__item {
-  @media screen and (min-width: $tablet) {
+  @include 768 {
     margin-right: 30px;
     width: calc(100% / 2 - 30px);
     &:nth-child(-n + 2){
       margin-bottom: 30px;
     }
-  @media screen and (min-width: $desktop) {
+  @include 1200 {
     
   &:last-child {
     margin-right: 0px;

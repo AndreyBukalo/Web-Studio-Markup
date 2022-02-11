@@ -1,10 +1,11 @@
 .projects {
-  @extend %section;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
+ @include sectiontablet;
+  
+   @include 1200 {
+     
+    @include section;
+    }}
 .projects__title-hidden {
   @extend %visually-hidden;
 }
+    

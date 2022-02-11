@@ -23,13 +23,13 @@
   left: 50%;
   overflow: auto;
   transform: translate(-50%, -50%);
-@media screen and (max-width:480px) {
+@include 480 {
   width: 90%;
   height: 609px;}
-@media screen and (min-width:$tablet) {
+@include 768 {
   width: 450px;
   height: 609px;}
-  @media screen and (min-width:$desktop) {
+ @include 1200 {
     width: 528px;
   height: 581px;}
 

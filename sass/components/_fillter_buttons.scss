@@ -1,11 +1,26 @@
 .filter {
   @extend %list;
+display: flex;
+  flex-wrap: wrap;
+ 
+  margin-bottom: 40px;
+  &__item:not(:last-child) {
+    margin-right: 8px;}
+    &__item:nth-child(-n + 3){
+      margin-bottom: 15px;
+    }
+ 
+  
+  @include 768 {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   &__item:not(:last-child) {
     margin-right: 8px;
   }
+}}
+.hide {
+  display: none;
 }
 
 .filter__btn {

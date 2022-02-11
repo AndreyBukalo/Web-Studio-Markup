@@ -4,16 +4,16 @@
  
 }
 .container-footer {
-  @media screen and (min-width:$desktop){
+  @include 1200 {
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
 }}
 
 .contacts-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width:$desktop){ 
+  @include 1200 { 
     display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -21,7 +21,7 @@
 }
 .adress {
   text-align: center;
-   @media screen and (min-width:$desktop){ 
+   @include 1200 { 
     text-align: left;}
   &__text {
     @include reset;
@@ -43,7 +43,7 @@
     color: $mail-text;
     &:last-child {
       margin-bottom: 60px;
-      @media screen and (min-width:$desktop){
+      @include 1200{
         margin-bottom: 0px;
     }
     &:hover,
@@ -67,11 +67,11 @@
     text-transform: uppercase;
 
     color: $white;
-     @media screen and (min-width:$desktop){ 
+     @include 1200{ 
        margin-bottom: 20px;
        text-align: left;
   }}
- @media screen and (min-width:$desktop){ 
+ @include 1200{ 
    margin-right: 93px;
 }}
 
@@ -79,7 +79,7 @@
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
-  @media screen and (min-width:$desktop){
+  @include 1200{
     margin-bottom: 0;
 }}
 .social-site__link--graybcg {
@@ -87,12 +87,12 @@
   color: $white;
 }
 .subcribe-block {
-@media screen and (min-width:$tablet) {
+@include 768 {
   display: flex;
   flex-direction: column;
   align-items:center;
 }
-@media screen and (min-width:$desktop) {
+@include 1200 {
  align-items:flex-start;
 }}
 .subcribe-block__title {
@@ -108,7 +108,7 @@
   color: $white;
 }
 .subcribe-form {
-  @media screen and (min-width:$desktop){
+  @include 1200{
    display: flex;
 }}
 .subscribe-form__email {

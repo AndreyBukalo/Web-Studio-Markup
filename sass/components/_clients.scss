@@ -1,7 +1,7 @@
 .clients {
   @extend %sectiontablet;
   margin: 0 auto;
-@media screen and (min-width:$desktop) {
+@include 1200 {
 padding-top: 94px;
 padding-bottom: 94px;
   
@@ -10,7 +10,7 @@ padding-bottom: 94px;
    @include reset;
   @extend %title;
   margin-bottom: 30px;
-  @media screen and (min-width:$desktop) {
+@include 1200 {
     margin-bottom: 50px;
   }
 }
@@ -22,7 +22,7 @@ padding-bottom: 94px;
   flex-wrap: wrap;
   justify-content: center;
   margin-right: -30px;
-  @media screen and (min-width:$desktop) {
+ @include 1200 {
   display: flex;
   flex-wrap: nowrap;
   
@@ -37,7 +37,7 @@ padding-bottom: 94px;
     margin-right: 0;
   }
     }
-  @media screen and (min-width: $tablet)  {
+ @include 768  {
     width: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -45,7 +45,7 @@ padding-bottom: 94px;
     margin-right: 0;
   }
 }
-@media screen and (min-width:$desktop) {
+@include 1200 {
   margin-right: 30px;
   &:nth-child(3n){
     margin-right: 30px;
@@ -58,7 +58,7 @@ padding-bottom: 94px;
 }
 .icon-box__link {
    max-width: 226px;
-   @media screen and (min-width:$desktop) {
+  @include 1200 {
      width: 170px;}
    height: 92px;
   transition: color 250ms $cubic;

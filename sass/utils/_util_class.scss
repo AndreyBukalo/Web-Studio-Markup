@@ -29,6 +29,20 @@
   color: $white;
   background-color: $accent;
 }
+@mixin 480 {
+@media screen and (min-width: 480px) {
+    width: 480px;}}
+@mixin 768 {
+  
+
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }}
+@mixin 1200 {
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+    }}
+
 
 @mixin flex-center {
   display: flex;
@@ -45,6 +59,15 @@
   list-style: none;
 }
 
+@mixin section {
+   
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+  
+@mixin sectiontablet {
+  padding-top: 60px;
+  padding-bottom: 60px;}
 %section {
   padding-top: 94px;
   padding-bottom: 94px;
