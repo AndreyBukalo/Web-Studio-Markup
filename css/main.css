@@ -61,7 +61,7 @@
   padding-bottom: 60px;
 }
 
-.about__title, .team__title, .clients__title {
+.about__title {
   font-size: 36px;
   font-weight: 700;
   line-height: calc(42 / 36);
@@ -747,6 +747,12 @@ img {
 }
 
 .team__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: calc(42 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
   margin: 0;
   padding: 0;
 }
@@ -759,6 +765,7 @@ img {
 
 @media (min-width: 1200px) {
   .team__title {
+    font-size: 36px;
     margin-bottom: 50px;
   }
 }
@@ -915,12 +922,19 @@ img {
 .clients__title {
   margin: 0;
   padding: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: calc(42 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
   margin-bottom: 30px;
 }
 
 @media (min-width: 1200px) {
   .clients__title {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 

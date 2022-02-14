@@ -6,12 +6,13 @@
       padding-bottom: 94px;
   }
   &__title {
-    @extend %title;
+    @include titletablet;
     @include reset;
    @include size (tablet) {
       margin-bottom: 30px;
     }
    @include size (desktop) {
+     font-size: 36px;
       margin-bottom: 50px;
   }}}
 

@@ -88,3 +88,14 @@
   letter-spacing: 0.03em;
   color: $second-text-color;
 }
+
+
+@mixin titletablet
+{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: calc(42 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $second-text-color;
+}
