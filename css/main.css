@@ -81,7 +81,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -1705,7 +1705,6 @@ img {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -1765,10 +1764,23 @@ img {
 }
 
 .products__content {
+  height: 110px;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+@media (min-width: 768px) {
+  .products__content--bigsize {
+    height: 147px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1200px) {
+  .products__content--bigsize {
+    height: 110px;
+  }
 }
 
 .products__link:hover .overlay__text {

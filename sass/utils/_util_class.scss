@@ -34,8 +34,8 @@
   @if $size == mobile {
     @media (min-width: 480px) { @content; }
   }  @else if $size == tablet {
-    @media (min-width: 768px) { @content; }
-  } @else if $size == pre-tablet {
+    @media (min-width: 768px) { @content;  }
+  } @else if $size == pre-tablet { 
     @media (max-width: 767px) { @content; }
   }
   @else if $size == pre-desktop {
