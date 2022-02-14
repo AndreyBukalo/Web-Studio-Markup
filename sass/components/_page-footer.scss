@@ -4,7 +4,7 @@
  
 }
 .container-footer {
-  @include 1200 {
+  @include size (desktop)  {
   display: flex;
   align-items: baseline;
 }}
@@ -13,15 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include 1200 { 
-    display: flex;
+  @include size (desktop)  { 
   flex-direction: column;
   align-items: stretch;
      margin-right: 70px;}
 }
 .adress {
   text-align: center;
-   @include 1200 { 
+   @include size (desktop)  { 
     text-align: left;}
   &__text {
     @include reset;
@@ -43,7 +42,7 @@
     color: $mail-text;
     &:last-child {
       margin-bottom: 60px;
-      @include 1200{
+      @include size (desktop) {
         margin-bottom: 0px;
     }
     &:hover,
@@ -67,11 +66,11 @@
     text-transform: uppercase;
 
     color: $white;
-     @include 1200{ 
+     @include size (desktop) { 
        margin-bottom: 20px;
        text-align: left;
   }}
- @include 1200{ 
+ @include size (desktop) { 
    margin-right: 93px;
 }}
 
@@ -79,7 +78,7 @@
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
-  @include 1200{
+  @include size (desktop) {
     margin-bottom: 0;
 }}
 .social-site__link--graybcg {
@@ -87,12 +86,12 @@
   color: $white;
 }
 .subcribe-block {
-@include 768 {
+@include size (tablet)  {
   display: flex;
   flex-direction: column;
   align-items:center;
 }
-@include 1200 {
+@include size (desktop)  {
  align-items:flex-start;
 }}
 .subcribe-block__title {
@@ -108,7 +107,7 @@
   color: $white;
 }
 .subcribe-form {
-  @include 1200{
+  @include size (desktop) {
    display: flex;
 }}
 .subscribe-form__email {
@@ -127,14 +126,15 @@
 
   color: rgba(255, 255, 255, 0.6);
   background-color: $footer-bgc;
-  @media screen and (min-width:$tablet) {
+  @include size (tablet)  {
     width: 450px;
     
   }
-  @media screen and (min-width:$desktop){
+  @include size (desktop) {
+    width: 358px;
     margin-bottom: 0;
     margin-right: 12px;
-    width: 358px;}
+    }
   &__email:focus {
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);

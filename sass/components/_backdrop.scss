@@ -18,18 +18,18 @@
   }
 }
 .modal {
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
-  overflow: auto;
+  
   transform: translate(-50%, -50%);
-@include 480 {
-  width: 90%;
-  height: 609px;}
-@include 768 {
+  width: 320px;
+  height: 609px;
+@include size (tablet)  {
   width: 450px;
   height: 609px;}
- @include 1200 {
+ @include size (desktop) {
     width: 528px;
   height: 581px;}
 

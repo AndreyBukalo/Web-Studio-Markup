@@ -11,7 +11,7 @@ display: flex;
     }
  
   
-  @include 768 {
+  @include size (tablet) {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;

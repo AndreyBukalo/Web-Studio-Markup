@@ -29,19 +29,22 @@
   color: $white;
   background-color: $accent;
 }
-@mixin 480 {
-@media screen and (min-width: 480px) {
-    width: 480px;}}
-@mixin 768 {
-  
 
-    @media screen and (min-width: 768px) {
-      width: 768px;
-    }}
-@mixin 1200 {
-    @media screen and (min-width: 1200px) {
-      width: 1200px;
-    }}
+ @mixin size ($size) {
+  @if $size == mobile {
+    @media (min-width: 480px) { @content; }
+  }  @else if $size == tablet {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == pre-tablet {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $size == pre-desktop {
+    @media (max-width: 1199px) { @content; }
+  }
+  @else if $size == desktop {
+    @media (min-width: 1200px) { @content; }
+  } 
+}
 
 
 @mixin flex-center {

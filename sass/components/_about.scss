@@ -1,6 +1,6 @@
 .about {
    @extend %section;
-  @media screen and  (max-width: 1199px) {
+  @include size (pre-desktop) {
     display: none;}
  
 

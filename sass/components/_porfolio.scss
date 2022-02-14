@@ -1,7 +1,7 @@
 .projects {
  @include sectiontablet;
   
-   @include 1200 {
+   @include size (desktop) {
      
     @include section;
     }}

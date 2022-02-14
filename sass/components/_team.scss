@@ -1,30 +1,29 @@
 .team {
   @extend %sectiontablet;
   background-color: $team-bgc;
-  @include 1200{
+  @include size (desktop) {
       padding-top: 94px;
       padding-bottom: 94px;
   }
   &__title {
     @extend %title;
     @include reset;
-   @include 768{
+   @include size (tablet) {
       margin-bottom: 30px;
     }
-   @include 1200{
+   @include size (desktop) {
       margin-bottom: 50px;
   }}}
 
 
 .card-list {
   @extend %list;
-  @include 768 {
+  @include size (tablet)  {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
   }
- @include 1200{
-  display: flex;
+ @include size (desktop) {
   flex-wrap: nowrap;
 }}
 .card-list__item {
@@ -39,7 +38,7 @@
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
   margin-top: 30px;
-  @include 768 {
+  @include size (tablet)  {
     margin-top:0px;
     margin-right: 30px;
     margin-bottom: 0;
@@ -48,7 +47,7 @@
       margin-bottom: 30px;
     }
   }
-@include 1200{
+@include size (desktop) {
   &:not(:last-child) {
     margin-right: 30px;
   }
