@@ -12,6 +12,9 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  @include size (tablet) {
+    justify-content: center;
+  }
 @include size (desktop)  {
   flex-wrap: nowrap;
 }}
@@ -22,8 +25,13 @@
     &:nth-child(-n + 2){
       margin-bottom: 30px;
     }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
   @include size (desktop)  {
-    
+    &:nth-child(even) {
+      margin-right: 30px;
+    }
   &:last-child {
     margin-right: 0px;
     
