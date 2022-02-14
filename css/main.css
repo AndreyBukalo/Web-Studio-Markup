@@ -1012,11 +1012,20 @@ img {
   background-color: #2f303a;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-footer {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1099,6 +1108,7 @@ img {
 .join-block__title {
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
   text-align: center;
   font-weight: 700;
   font-size: 14px;

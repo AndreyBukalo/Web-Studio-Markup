@@ -4,8 +4,12 @@
  
 }
 .container-footer {
+  @include size (tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   @include size (desktop)  {
-  display: flex;
   align-items: baseline;
 }}
 
@@ -57,7 +61,7 @@
   &__title {
     @include reset;
 
-   
+    margin-bottom: 20px;
     text-align: center;
     font-weight: 700;
     font-size: 14px;
