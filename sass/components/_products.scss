@@ -1,9 +1,8 @@
 .products {
   @extend %list;
   
-  @include size ($tablet)  {
-    
-    display: flex;
+  @include size (tablet)  {
+   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
@@ -18,20 +17,19 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  @include size ($tablet)  {
+  @include size (tablet)  {
     flex-basis: calc(100% / 2 - 30px);
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
-  @include size ($desktop)  {
+  @include size (desktop)  {
     flex-basis: calc(100% / 3 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
   &:nth-child(2n) {
-      margin-right: 30px;
-    
-  }
+      margin-right: 30px;}
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
 }}
 
 .products__link {

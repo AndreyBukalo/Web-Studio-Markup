@@ -11,13 +11,9 @@ display: flex;
     }
  
   
-  @include size (tablet) {
-  display: flex;
+  @include size (tablet) { 
   justify-content: center;
   margin-bottom: 50px;
-  &__item:not(:last-child) {
-    margin-right: 8px;
-  }
 }}
 .hide {
   display: none;

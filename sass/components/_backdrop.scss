@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   opacity: 1;
-  z-index: 1;
+  z-index: 4;
   transition: opacity 250ms $cubic, visibility 250ms $cubic;
 
   visibility: visible;
@@ -18,18 +18,20 @@
   }
 }
 .modal {
-  overflow: hidden;
+    overflow-x: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
-  
+   
   transform: translate(-50%, -50%);
-  width: 320px;
-  height: 609px;
-@include size (tablet)  {
-  width: 450px;
-  height: 609px;}
- @include size (desktop) {
+  width:100%;
+  height: 90vmax;
+   
+  @include size (mobile) {
+    width: 450px;
+    height: 609px;
+    }
+  @include size (desktop) {
     width: 528px;
   height: 581px;}
 
