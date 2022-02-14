@@ -692,6 +692,12 @@ img {
   color: #212121;
 }
 
+@media (min-width: 768px) {
+  .thumbnail__title {
+    text-align: left;
+  }
+}
+
 .thumbnail__text {
   margin: 0;
   padding: 0;
