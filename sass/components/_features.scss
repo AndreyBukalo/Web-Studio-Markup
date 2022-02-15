@@ -19,6 +19,12 @@
   flex-wrap: nowrap;
 }}
 .thumbnail__item {
+  
+  @include size (pre-tablet) {
+  &:not(:last-child) {
+ margin-bottom: 30px;
+  }}
+
   @include size (tablet)  {
     margin-right: 30px;
     width: calc(100% / 2 - 30px);
@@ -27,7 +33,7 @@
     }
     &:nth-child(even) {
       margin-right: 0;
-    }
+    }}
   @include size (desktop)  {
     &:nth-child(even) {
       margin-right: 30px;
@@ -35,8 +41,8 @@
   &:last-child {
     margin-right: 0px;
     
-  }
-}}}
+  }}
+}
 
 .thumbnail__icon {
   height: 120px;
@@ -63,7 +69,5 @@
   @include reset;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  &:not(:nth-child(4))  {
-    margin-bottom: 30px;
-  }
+  
 }

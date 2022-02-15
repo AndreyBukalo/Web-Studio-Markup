@@ -1,7 +1,8 @@
 .menu-button {
  
+  
   z-index: 3;
-  display: inline-flex;
+  display: block;
   padding: 0;
   margin: 0;
   margin-left: auto;
@@ -14,6 +15,12 @@
   }
   &__cross {
     display: none;
+  }
+  &--is-open {
+     position: fixed;
+  top:10px;
+  right: 15px;
+
   }
   @include size (tablet)  {
     display: none;
@@ -44,6 +51,7 @@
   padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
+    padding-right: 83px;
   background: $white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -64,6 +72,7 @@
 }
 .mobile-menu--bottom {
   margin-top: auto;
+  
 }
   
 
@@ -136,18 +145,18 @@
 
 .mobile-social {
   margin-top: 64px;
-  display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-
-  &__link {
+ 
+   &__link {
+ 
+ 
   text-decoration: none;
     font-weight: 500;
     font-size: 18px;
     line-height: calc(22 / 18);
     letter-spacing: 0.02em;
     color: $accent;
+    &:not(:last-child) {
+    margin-right: 10px;}
 
     &::after {
      content: '';

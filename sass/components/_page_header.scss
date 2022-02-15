@@ -10,7 +10,16 @@
 }
 
 .container--page-header {
-@include flex-center;
+  @include flex-center;
+  @include size (pre-tablet) {
+    height: 60px;
+width: 100%;
+justify-content: flex-start;
+  }
+  @include size (desktop) {
+
+  }
+
 
 }
 
@@ -73,8 +82,12 @@
     &:last-child {
       margin-right: 84px;
     }
+    @include size (desktop)  {
+    &:last-child {
+      margin-right: 305px;
+    }
   }
-}
+}}
 
 .contacts {
   @include size (tablet)   {
@@ -82,7 +95,7 @@
     flex-wrap: wrap;
   }
  @include size (desktop) {
-    @include flex-center;
+   flex-wrap: nowrap;
   margin-left: auto;
   }
 

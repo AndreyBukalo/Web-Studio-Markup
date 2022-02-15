@@ -43,9 +43,10 @@
 }
 
 .hero__title {
-  max-width: 696px;
+  
+  
   margin: 0 auto;
-
+max-width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: calc(42 / 26);
@@ -53,7 +54,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $white;
+  
   @include size (desktop) {
+    max-width: 696px;
     font-size: 44px;
   line-height: calc(60 / 44);
 }}
