@@ -1,5 +1,5 @@
 .menu-button {
-  
+ 
   z-index: 3;
   display: inline-flex;
   padding: 0;
@@ -22,24 +22,28 @@
 
 .menu-button--is-open .menu-button__cross {
   display: block;
-  position: fixed;
+  
+ 
   
 }
 .menu-button--is-open .menu-button__menu {
   display: none;
 }
 
+
 .mobile-menu {
   display: none;
   &--is-open {
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
+  display: block;
+  z-index: 2;
   position: fixed;
-  top: 0%;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
   background: $white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -50,11 +54,23 @@
   }
 }
 
-
+.mob-menu--container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+.mobile-menu--bottom {
+  margin-top: auto;
+}
   
 
 .mobile-menu__navigation {
   @extend %list;
+  display: block;
+  
 
   @media screen and (min-width: 1140px) {
     display: flex;
@@ -81,25 +97,17 @@
 
 
 .mobile-menu__item {
-  margin-left: 40px;
-  &:first-child {
-    margin-top: 48px;
-  }
-  &:not(:last-child) {
-    margin-bottom: 32px;
+ &:not(:last-child) {
+   margin-bottom: 32px;
   }
 }
 
 .moblie-contacts {
-  display: flex;
-  flex-direction: column-reverse;
   
-  margin-left: 40px;
-
-  &__link {
+&__link {
     display: block;
     
-    &:last-child {
+    &:first-child {
       margin-bottom: 32px;
     }
     transition: color 250ms $cubic;
@@ -113,6 +121,7 @@
       color: $accent;
     }
     &--bluecolor {
+    
       color: $accent;
     }
   }
@@ -127,31 +136,27 @@
 
 .mobile-social {
   margin-top: 64px;
-  margin-bottom: 48px;
-  margin-left: 40px;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 
   &__link {
-    display: inline-block;
-    position: relative;
-    padding-right: 20px;
-
-    &::after {
-      display: inline-block;
-      content: '';
-      position: absolute;
-
-      width: 22px;
-
-      top: 45%;
-      left: 80%;
-      transform: rotate(90deg);
-      border: 1px solid rgba(33, 33, 33, 0.2);
-    }
-    text-decoration: none;
+  text-decoration: none;
     font-weight: 500;
     font-size: 18px;
     line-height: calc(22 / 18);
     letter-spacing: 0.02em;
     color: $accent;
-  }
+
+    &::after {
+     content: '';
+    width: 2px;
+    height: 22px;
+    margin-left: 10px;
+    border: 1px solid rgba(33,33,33,0.2);
 }
+    
+   
+  }}
+
