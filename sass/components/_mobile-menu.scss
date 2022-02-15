@@ -1,4 +1,5 @@
 .menu-button {
+  
   z-index: 3;
   display: inline-flex;
   padding: 0;
@@ -21,35 +22,39 @@
 
 .menu-button--is-open .menu-button__cross {
   display: block;
+  position: fixed;
+  
 }
 .menu-button--is-open .menu-button__menu {
   display: none;
 }
 
 .mobile-menu {
-  z-index: 2;
-  position: absolute;
+  display: none;
+  &--is-open {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  position: fixed;
   top: 0%;
   left: 0;
- width: 100vw;
-  display: none;
-  
+  width: 100vw;
+  height: 100vh;
   background: $white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
-  &--is-open {
-    display: block;
+
   }
   @include size (tablet)  {
     display: none;
   }
 }
 
+
+  
+
 .mobile-menu__navigation {
   @extend %list;
-
-  display: flex;
-  flex-direction: column;
 
   @media screen and (min-width: 1140px) {
     display: flex;
@@ -88,7 +93,7 @@
 .moblie-contacts {
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 302px;
+  
   margin-left: 40px;
 
   &__link {
