@@ -13,7 +13,9 @@
   display: flex;
   flex-wrap: wrap;
   @include size (tablet) {
+     width: 768px;
     justify-content: center;
+    margin-left: -15px;
   }
 @include size (desktop)  {
   flex-wrap: nowrap;
@@ -35,6 +37,8 @@
       margin-right: 0;
     }}
   @include size (desktop)  {
+    &:nth-child(-n + 2){
+      margin-bottom: 0px;}
     &:nth-child(even) {
       margin-right: 30px;
     }

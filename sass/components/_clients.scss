@@ -19,17 +19,22 @@ padding-bottom: 94px;
 }
 .icon-box {
   @extend %list;
-  max-width: 100%;
+width: 480px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-right: -30px;
+  
+
+  @include size (tablet) {
+width: 768px;
+margin-left: -15px;
+  }
  @include size (desktop)  {
-flex-wrap: nowrap;
+   flex-wrap: nowrap;
   
 }
 
   &__item {
+    
     width: calc(100% / 2 - 30px);
     margin-right: 30px;
     &:nth-child(-n + 4){ 
@@ -49,7 +54,9 @@ flex-wrap: nowrap;
   }
 }
 @include size (desktop)  {
-  &:nth-child(3n){
+  &:nth-child(-n + 4){ 
+    margin-bottom: 0px;}
+  &:not(:last-child ){
     margin-right: 30px;
   }
 }
@@ -59,7 +66,7 @@ flex-wrap: nowrap;
   fill: currentColor;
 }
 .icon-box__link {
-   max-width: 226px;
+ max-width: 210px;
   @include size (desktop)  {
      width: 170px;}
    height: 92px;
@@ -69,6 +76,7 @@ flex-wrap: nowrap;
   
   padding-top: 16px;
   padding-bottom: 16px;
+  
 
   border: 1.5px solid #afb1b8;
   border-radius: 4px;
