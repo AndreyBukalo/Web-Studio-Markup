@@ -13,12 +13,13 @@
   display: flex;
   flex-wrap: wrap;
   @include size (tablet) {
-     width: 768px;
+   
     justify-content: center;
-    margin-left: -15px;
+   
   }
 @include size (desktop)  {
   flex-wrap: nowrap;
+  
 }}
 .thumbnail__item {
   
