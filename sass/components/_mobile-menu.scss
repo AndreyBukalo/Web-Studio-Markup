@@ -1,6 +1,4 @@
 .menu-button {
- 
-  
   z-index: 3;
   display: block;
   padding: 0;
@@ -28,10 +26,7 @@
 }
 
 .menu-button--is-open .menu-button__cross {
-  display: block;
-  
- 
-  
+  display: block; 
 }
 .menu-button--is-open .menu-button__menu {
   display: none;

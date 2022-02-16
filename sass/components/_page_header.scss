@@ -1,7 +1,6 @@
 /* Шапка и навигация */
 
 .page-header {
-  
   position: relative;
   min-height: 60px;
   background-color: $white;
@@ -30,10 +29,6 @@ justify-content: flex-start;
  @include size (tablet)  {
     display: flex;
     align-items: center;
-  }
-  @include size (desktop)  {
-    display:flex;
-    
   }
 }
 

@@ -13,21 +13,17 @@
   display: flex;
   flex-wrap: wrap;
   @include size (tablet) {
-   
-    justify-content: center;
-   
-  }
+   justify-content: center;
+   }
 @include size (desktop)  {
   flex-wrap: nowrap;
-  
-}}
+  }}
+
 .thumbnail__item {
-  
   @include size (pre-tablet) {
   &:not(:last-child) {
  margin-bottom: 30px;
   }}
-
   @include size (tablet)  {
     margin-right: 30px;
     width: calc(100% / 2 - 30px);

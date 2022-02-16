@@ -376,14 +376,6 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
-  .main-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 @media (min-width: 768px) {
   .navigation {
     display: -webkit-box;

@@ -22,18 +22,9 @@ padding-bottom: 94px;
  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
-  
 
-  @include size (tablet) {
-
-
-  }
  @include size (desktop)  {
-
-   flex-wrap: nowrap;
-
-  
+flex-wrap: nowrap;
 }
 
   &__item {
