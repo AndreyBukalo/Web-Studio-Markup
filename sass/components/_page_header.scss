@@ -119,7 +119,7 @@ justify-content: flex-start;
         fill: $accent;
       }
     }
-    @include size (tablet)  {
+    @include size (desktop)  {
      margin-right: 10px;
       width: 16px;
       height: 12px;
