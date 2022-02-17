@@ -344,7 +344,6 @@ img {
 @media (max-width: 767px) {
   .container--page-header {
     height: 60px;
-    width: 100%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
